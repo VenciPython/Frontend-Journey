@@ -4,7 +4,7 @@ function between100200(input){
   if(num < 100){
     console.log("Less than 100");
 
-  }else if(num >=100 && num  <=200){          //новото тук е  &&
+  }else if(num >=100 && num  <=200){       //или num  else if(num <= 200)
     console.log("Between 100 and 200");
 
   }else{
@@ -12,3 +12,6 @@ function between100200(input){
   }
 
 }
+
+
+ //новото тук е  &&, обаче може и само така num  <=200 защото щом е влязло в първото условие няма да стигне до второто!
