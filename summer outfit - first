@@ -1,0 +1,45 @@
+//моя начин на решаване на задачата, който обаче не дава 100% с judge
+
+function summerOutfit(input) {
+    let temperature = Number(input[0]);
+    let partOFDay = input[1];
+
+    let Shoes = '';
+    let Outfit = '';
+
+    switch (partOFDay) {
+        case "Morning":
+            if (temperature >= 10 && temperature < 18) {
+                Outfit = "Sweatshirt";
+                Shoes = "Sneakers";
+            } else if (temperature > 18 && temperature <= 24) {
+                Outfit = "Shirt";
+                Shoes = "Moccasins";
+            } else if (temperature >= 25) {
+                Outfit = "T-Shirt";
+                Shoes = "Sandals";
+            }
+            break;
+
+        case "Afternoon":
+            if (temperature >= 10 && temperature < 18) {
+                Outfit = "Shirt";
+                Shoes = "Moccasins";
+            } else if (temperature > 18 && temperature <= 24) {
+                Outfit = "T-Shirt";
+                Shoes = "Sandals";
+            } else if (temperature >= 25) {
+                Outfit = "Swim Suit";
+                Shoes = "Barefoot";
+            }
+            break;
+        case "Evening":
+            Outfit = "Shirt";
+            Shoes = "Moccasins";
+            break;
+    }
+
+    console.log(`It's ${temperature} degrees, get your ${Outfit} and ${Shoes}.`)
+}
+
+//summerOutfit(["28","Evening"])
