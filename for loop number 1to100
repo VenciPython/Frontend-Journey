@@ -1,6 +1,6 @@
 function Numbersfrom1to100(input) {
 
-   for (sum = 0; sum <= 100; sum++) {
+   for (sum = 1; sum <= 100; sum++) {
       console.log(sum);
    }
 
