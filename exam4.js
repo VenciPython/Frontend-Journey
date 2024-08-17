@@ -1,38 +1,40 @@
-function examStatistics(studentCount, grades) {
-    let topStudents = 0;
-    let between4And5 = 0;
-    let between3And4 = 0;
-    let fail = 0;
-    let totalGrades = 0;
+// Входни данни
+let numberOfStudents = 10; // брой на студентите
+let grades = [3.00, 2.99, 5.68, 3.01, 4, 4, 6.00, 4.50, 2.44, 5.00]; // оценки на студентите
 
-    for (let i = 0; i < studentCount; i++) {
-        let grade = grades[i];
-        totalGrades += grade;
+let topStudents = 0;
+let betweenFourAndFive = 0;
+let betweenThreeAndFour = 0;
+let fail = 0;
+let totalSum = 0;
 
-        if (grade >= 5.00) {
-            topStudents++;
-        } else if (grade >= 4.00) {
-            between4And5++;
-        } else if (grade >= 3.00) {
-            between3And4++;
-        } else {
-            fail++;
-        }
+for (let studentIndex = 0; studentIndex < numberOfStudents; studentIndex++) {
+    let grade = grades[studentIndex];
+    totalSum += grade;
+
+    if (grade >= 5.00) {
+        topStudents++;
+    } else if (grade >= 4.00) {
+        betweenFourAndFive++;
+    } else if (grade >= 3.00) {
+        betweenThreeAndFour++;
+    } else {
+        fail++;
     }
-
-    let topStudentsPercentage = (topStudents / studentCount) * 100;
-    let between4And5Percentage = (between4And5 / studentCount) * 100;
-    let between3And4Percentage = (between3And4 / studentCount) * 100;
-    let failPercentage = (fail / studentCount) * 100;
-    let averageGrade = totalGrades / studentCount;
-
-    console.log(`Top students: ${topStudentsPercentage.toFixed(2)}%`);
-    console.log(`Between 4.00 and 4.99: ${between4And5Percentage.toFixed(2)}%`);
-    console.log(`Between 3.00 and 3.99: ${between3And4Percentage.toFixed(2)}%`);
-    console.log(`Fail: ${failPercentage.toFixed(2)}%`);
-    console.log(`Average: ${averageGrade.toFixed(2)}`);
 }
 
-// Example usage:
-// Inputs: Number of students = 6, Grades = [2.5, 3.5, 4.75, 5.5, 3.0, 4.0]
-examStatistics(6, [2.5, 3.5, 4.75, 5.5, 3.0, 4.0]);
+// Изчисляване на процентите
+let topStudentsPercent = (topStudents / numberOfStudents * 100).toFixed(2);
+let betweenFourAndFivePercent = (betweenFourAndFive / numberOfStudents * 100).toFixed(2);
+let betweenThreeAndFourPercent = (betweenThreeAndFour / numberOfStudents * 100).toFixed(2);
+let failPercent = (fail / numberOfStudents * 100).toFixed(2);
+
+// Изчисляване на средния успех
+let averageGrade = (totalSum / numberOfStudents).toFixed(2);
+
+// Извеждане на резултатите
+console.log(`Top students: ${topStudentsPercent}%`);
+console.log(`Between 4.00 and 4.99: ${betweenFourAndFivePercent}%`);
+console.log(`Between 3.00 and 3.99: ${betweenThreeAndFourPercent}%`);
+console.log(`Fail: ${failPercent}%`);
+console.log(`Average: ${averageGrade}`);
