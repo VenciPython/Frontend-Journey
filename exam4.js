@@ -96,23 +96,28 @@ if (success) {
 -------
 
 
+let num = 231; // Примерен вход, можете да го смените с друг
 
-function printMultiplicationTable(number) {
-    let digits = number.toString().split('').reverse();
-    let firstDigit = parseInt(digits[0]);
-    let secondDigit = parseInt(digits[1]);
-    let thirdDigit = parseInt(digits[2]);
+let firstDigit = num % 10; // Последната цифра
+num = Math.floor(num / 10);
 
-    for (let x = 1; x <= thirdDigit; x++) {
-        for (let y = 1; y <= secondDigit; y++) {
-            for (let z = 1; z <= firstDigit; z++) {
-                let result = x * y * z;
-                console.log(`${x} * ${y} * ${z} = ${result};`);
-            }
+let secondDigit = num % 10; // Средната цифра
+num = Math.floor(num / 10);
+
+let thirdDigit = num; // Първата цифра (тъй като остава само една)
+
+let x = 1;
+
+while (x <= firstDigit) {
+    let y = 1;
+    while (y <= secondDigit) {
+        let z = 1;
+        while (z <= thirdDigit) {
+            let result = x * y * z;
+            console.log(`${x} * ${y} * ${z} = ${result};`);
+            z++;
         }
+        y++;
     }
+    x++;
 }
-
-let input = 231; // Примерен вход
-printMultiplicationTable(input);
-
