@@ -90,3 +90,29 @@ if (success) {
     console.log("Failed!");
     console.log(currentHeight);
 }
+
+
+
+-------
+
+
+
+function printMultiplicationTable(number) {
+    let digits = number.toString().split('').reverse();
+    let firstDigit = parseInt(digits[0]);
+    let secondDigit = parseInt(digits[1]);
+    let thirdDigit = parseInt(digits[2]);
+
+    for (let x = 1; x <= thirdDigit; x++) {
+        for (let y = 1; y <= secondDigit; y++) {
+            for (let z = 1; z <= firstDigit; z++) {
+                let result = x * y * z;
+                console.log(`${x} * ${y} * ${z} = ${result};`);
+            }
+        }
+    }
+}
+
+let input = 231; // Примерен вход
+printMultiplicationTable(input);
+
