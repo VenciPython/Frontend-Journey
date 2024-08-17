@@ -94,9 +94,7 @@ if (success) {
 
 
 -------
-
-
-let num = 231; // Примерен вход, можете да го смените с друг
+let num = 324; // Примерен вход
 
 let firstDigit = num % 10; // Последната цифра
 num = Math.floor(num / 10);
@@ -106,18 +104,12 @@ num = Math.floor(num / 10);
 
 let thirdDigit = num; // Първата цифра (тъй като остава само една)
 
-let x = 1;
-
-while (x <= firstDigit) {
-    let y = 1;
-    while (y <= secondDigit) {
-        let z = 1;
-        while (z <= thirdDigit) {
-            let result = x * y * z;
-            console.log(`${x} * ${y} * ${z} = ${result};`);
-            z++;
+for (let i = 1; i <= firstDigit; i++) {
+    for (let j = 1; j <= secondDigit; j++) {
+        for (let k = 1; k <= thirdDigit; k++) {
+            let result = i * j * k;
+            console.log(`${i} * ${j} * ${k} = ${result};`);
         }
-        y++;
     }
-    x++;
 }
+
