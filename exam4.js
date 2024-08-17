@@ -57,3 +57,36 @@ function exam(input) {
 
 // Пример за тестови данни
 exam([10, '3.00,2.99,5.68,3.01,4,4,6.00,4.50,2.44,5.00']);
+
+
+let currentHeight = 5364;
+let days = 0;
+let success = false;
+
+while (days < 5) {
+    let continueClimbing = prompt("Continue climbing? (Yes/No)");
+    if (continueClimbing === "END") {
+        break;
+    }
+    
+    if (continueClimbing === "No") {
+        break;
+    }
+
+    let climbedMeters = parseInt(prompt("Enter climbed meters:"));
+    
+    currentHeight += climbedMeters;
+    days++;
+
+    if (currentHeight >= 8848) {
+        success = true;
+        break;
+    }
+}
+
+if (success) {
+    console.log(`Goal reached for ${days} days!`);
+} else {
+    console.log("Failed!");
+    console.log(currentHeight);
+}
