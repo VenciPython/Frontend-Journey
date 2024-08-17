@@ -92,58 +92,49 @@ if (success) {
 }
 
 
-
 -------
-let num = 324; // Примерен вход
 
-let firstDigit = num % 10; // Последната цифра
-num = Math.floor(num / 10);
+function mathTable(input) {
+    let currentHeight = 5364;
+    let days = 0;
+    let success = false;
+    let index = 0;
 
-let secondDigit = num % 10; // Средната цифра
-num = Math.floor(num / 10);
+    while (days < 5) {
+        let decision = input[index++];
+        
+        if (decision === "END") {
+            break;
+        }
 
-let thirdDigit = num; // Първата цифра (тъй като остава само една)
+        if (decision === "No") {
+            break;
+        }
 
-for (let i = 1; i <= firstDigit; i++) {
-    for (let j = 1; j <= secondDigit; j++) {
-        for (let k = 1; k <= thirdDigit; k++) {
-            let result = i * j * k;
-            console.log(`${i} * ${j} * ${k} = ${result};`);
+        let climbedMeters = Number(input[index++]);
+
+        if (isNaN(climbedMeters) || climbedMeters < 1 || climbedMeters > 4000) {
+            console.log("Invalid input for climbed meters.");
+            continue;
+        }
+
+        currentHeight += climbedMeters;
+        days++;
+
+        if (currentHeight >= 8848) {
+            success = true;
+            break;
         }
     }
-}
 
-
-let currentHeight = 5364;  // Начална височина
-let days = 0;
-let success = false;
-
-while (days < 5) {
-    let decision = prompt("Continue climbing? (Yes/No/END): ");
-    
-    if (decision === "END") {
-        break;
-    }
-
-    if (decision === "No") {
-        break;
-    }
-
-    let climbedMeters = Number(prompt("Enter climbed meters: "));
-
-    currentHeight += climbedMeters;
-    days++;
-
-    if (currentHeight >= 8848) {
-        success = true;
-        break;
+    if (success) {
+        console.log(`Goal reached for ${days} days!`);
+    } else {
+        console.log("Failed!");
+        console.log(currentHeight);
     }
 }
 
-if (success) {
-    console.log(`Goal reached for ${days} days!`);
-} else {
-    console.log("Failed!");
-    console.log(currentHeight);
-}
-
+// Пример за входни данни
+let input = ["Yes", "1000", "Yes", "945", "No", "1200", "END"];
+mathTable(input);
