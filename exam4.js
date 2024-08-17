@@ -113,3 +113,37 @@ for (let i = 1; i <= firstDigit; i++) {
     }
 }
 
+
+let currentHeight = 5364;  // Начална височина
+let days = 0;
+let success = false;
+
+while (days < 5) {
+    let decision = prompt("Continue climbing? (Yes/No/END): ");
+    
+    if (decision === "END") {
+        break;
+    }
+
+    if (decision === "No") {
+        break;
+    }
+
+    let climbedMeters = Number(prompt("Enter climbed meters: "));
+
+    currentHeight += climbedMeters;
+    days++;
+
+    if (currentHeight >= 8848) {
+        success = true;
+        break;
+    }
+}
+
+if (success) {
+    console.log(`Goal reached for ${days} days!`);
+} else {
+    console.log("Failed!");
+    console.log(currentHeight);
+}
+
