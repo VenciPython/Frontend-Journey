@@ -1,43 +1,44 @@
-function calculateHotelCost(days, roomType, feedback) {
-    let pricePerNight;
+function santasHoliday(input) {
+   let days = Number(input[0]);
+   let housingType = input[1];
+   let grade = input[2];
+   let pricePerNight = 0;
 
-    if (roomType === "room for one person") {
-        pricePerNight = 18.00;
-    } else if (roomType === "apartment") {
-        pricePerNight = 25.00;
-    } else if (roomType === "president apartment") {
-        pricePerNight = 35.00;
-    }
+   if (housingType === "room for one person") {
+      pricePerNight = 18.00 * (days - 1);
+   } else if (housingType === "apartment") {
+      pricePerNight = 25.00* (days - 1);
+   } else if (housingType === "president apartment") {
+      pricePerNight = 35.00 * (days - 1);
+   }
 
-    let totalCost = pricePerNight * days;
+   if (housingType === "apartment") {
+      if (days < 10) {
+         pricePerNight *= 0.70;
+      } else if (10 <= days && days < 15) {
+         pricePerNight *= 0.65;
+      } else {
+         pricePerNight *= 0.50;
+      }
+   } else if (housingType === "president apartment") {
+      if (days < 10) {
+         pricePerNight *= 0.90;
+      }else if (10 <= days && days < 15) {
+         pricePerNight *= 0.85;
+      } else {
+         pricePerNight *= 0.80;
+      }
+   }
 
-    if (roomType === "apartment") {
-        if (days > 15) {
-            totalCost *= 0.50;
-        } else if (days >= 10) {
-            totalCost *= 0.65;
-        } else {
-            totalCost *= 0.70;
-        }
-    } else if (roomType === "president apartment") {
-        if (days > 15) {
-            totalCost *= 0.80;
-        } else if (days >= 10) {
-            totalCost *= 0.85;
-        } else {
-            totalCost *= 0.90;
-        }
-    }
+   if (grade === "positive") {
+      pricePerNight *= 1.25;
+   } else if (grade === "negative") {
+      pricePerNight *= 0.90;
+   }
 
-    if (feedback === "positive") {
-        totalCost *= 1.25;
-    } else if (feedback === "negative") {
-        totalCost *= 0.90;
-    }
-
-    console.log(totalCost.toFixed(2));
+   console.log(pricePerNight.toFixed(2));
 }
 
-// Example usage:
-// Inputs: Days = 14, Room type = "apartment", Feedback = "positive"
-calculateHotelCost(14, "apartment", "positive");
+santasHoliday(['30',
+   'president apartment',
+   'negative'])
