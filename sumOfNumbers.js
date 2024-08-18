@@ -7,6 +7,6 @@ function sumOfNumbers(input) {
         //console.log(numAsNum); принтирам отделно всяка цифра за проверка
         sum += numAsNum; // събира сбора на всички цифри
     }
-    console.log(sum);
+    console.log(`The sum of the digits is:${sum}`);;
 }
-sumOfNumbers([`2345`])])
+//sumOfNumbers([`2345`])
