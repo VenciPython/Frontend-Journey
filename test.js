@@ -1,28 +1,30 @@
-function christmasGifts(input) {
-    let adultsCount = 0;
-    let kidsCount = 0;
-    let moneyForToys = 0;
-    let moneyForSweaters = 0;
+function goldMine(input) {
     let index = 0;
+    let locationsCount = Number(input[index]);
+    index++;
 
-    while (input[index] !== "Christmas") {
-        let age = Number(input[index]);
+    for (let i = 0; i < locationsCount; i++) {
+        let expectedAverageGold = Number(input[index]);
+        index++;
+        let daysCount = Number(input[index]);
+        index++;
+        let totalGold = 0;
 
-        if (age <= 16) {
-            kidsCount++;
-            moneyForToys += 5;
-        } else {
-            adultsCount++;
-            moneyForSweaters += 15;
+        for (let j = 0; j < daysCount; j++) {
+            let dailyGold = Number(input[index]);
+            index++;
+            totalGold += dailyGold;
         }
 
-        index++;
-    }
+        let averageGold = totalGold / daysCount;
 
-    console.log(`Number of adults: ${adultsCount}`);
-    console.log(`Number of kids: ${kidsCount}`);
-    console.log(`Money for toys: ${moneyForToys}`);
-    console.log(`Money for sweaters: ${moneyForSweaters}`);
+        if (averageGold >= expectedAverageGold) {
+            console.log(`Good job! Average gold per day: ${averageGold.toFixed(2)}.`);
+        } else {
+            let goldNeeded = expectedAverageGold - averageGold;
+            console.log(`You need ${goldNeeded.toFixed(2)} gold.`);
+        }
+    }
 }
 
-christmasGifts(['16', '20', '46', '12', '8', '20', '49', 'Christmas']);
+goldMine(['2', '10', '3', '10.1', '10.2', '10', '20', '2', '5.1', '15.5']);
