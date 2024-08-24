@@ -3,15 +3,10 @@ function christmasGifts(input) {
     let kidsCount = 0;
     let moneyForToys = 0;
     let moneyForSweaters = 0;
+    let index = 0;
 
-    for (let i = 0; i < input.length; i++) {
-        let age = input[i];
-
-        if (age === "Christmas") {
-            break;
-        }
-
-        age = Number(age);
+    while (input[index] !== "Christmas") {
+        let age = Number(input[index]);
 
         if (age <= 16) {
             kidsCount++;
@@ -20,6 +15,8 @@ function christmasGifts(input) {
             adultsCount++;
             moneyForSweaters += 15;
         }
+
+        index++;
     }
 
     console.log(`Number of adults: ${adultsCount}`);
@@ -28,4 +25,4 @@ function christmasGifts(input) {
     console.log(`Money for sweaters: ${moneyForSweaters}`);
 }
 
-christmasGifts(['16', '20', '14', '25', 'Christmas']);
+christmasGifts(['16', '20', '46', '12', '8', '20', '49', 'Christmas']);
