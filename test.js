@@ -1,35 +1,28 @@
-function calculateCost(input) {
-    let month = input[0];
-    let hours = Number(input[1]);
-    let people = Number(input[2]);
-    let timeOfDay = input[3];
+function calculateCatFood(input) {
+    let numberOfCats = Number(input[0]);
+    let group1 = 0;
+    let group2 = 0;
+    let group3 = 0;
+    let totalFood = 0;
 
-    let pricePerHour = 0;
+    for (let i = 1; i <= numberOfCats; i++) {
+        let foodPerCat = Number(input[i]);
+        totalFood += foodPerCat;
 
-    if (month === 'march' || month === 'april' || month === 'may') {
-        if (timeOfDay === 'day') {
-            pricePerHour = 10.50;
-        } else {
-            pricePerHour = 8.40;
-        }
-    } else if (month === 'june' || month === 'july' || month === 'august') {
-        if (timeOfDay === 'day') {
-            pricePerHour = 12.60;
-        } else {
-            pricePerHour = 10.20;
+        if (foodPerCat >= 100 && foodPerCat < 200) {
+            group1++;
+        } else if (foodPerCat >= 200 && foodPerCat < 300) {
+            group2++;
+        } else if (foodPerCat >= 300 && foodPerCat <= 400) {
+            group3++;
         }
     }
 
-    if (people >= 4) {
-        pricePerHour *= 0.90;
-    }
+    let pricePerKg = 12.45;
+    let totalPrice = (totalFood / 1000) * pricePerKg;
 
-    if (hours >= 5) {
-        pricePerHour *= 0.50;
-    }
-
-    let totalCost = pricePerHour * hours * people;
-
-    console.log(`Price per person for one hour: ${pricePerHour.toFixed(2)}`);
-    console.log(`Total cost of the visit: ${totalCost.toFixed(2)}`);
+    console.log(`Group 1: ${group1} cats.`);
+    console.log(`Group 2: ${group2} cats.`);
+    console.log(`Group 3: ${group3} cats.`);
+    console.log(`Price for food per day: ${totalPrice.toFixed(2)} lv.`);
 }
