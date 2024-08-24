@@ -1,30 +1,31 @@
-function catFood(input) {
-    let numberOfCats = Number(input[0]);
-    let firstGroup = 0;
-    let secondGroup = 0;
-    let thirdGroup = 0;
-    let totalFood = 0;
+function christmasGifts(input) {
+    let adultsCount = 0;
+    let kidsCount = 0;
+    let moneyForToys = 0;
+    let moneyForSweaters = 0;
 
-    for (let i = 1; i <= numberOfCats; i++) {
-        let foodPerCat = Number(input[i]);
-        totalFood += foodPerCat;
+    for (let i = 0; i < input.length; i++) {
+        let age = input[i];
 
-        if (foodPerCat >= 100 && foodPerCat < 200) {
-            firstGroup++;
-        } else if (foodPerCat >= 200 && foodPerCat < 300) {
-            secondGroup++;
-        } else if (foodPerCat >= 300 && foodPerCat <= 400) {
-            thirdGroup++;
+        if (age === "Christmas") {
+            break;
+        }
+
+        age = Number(age);
+
+        if (age <= 16) {
+            kidsCount++;
+            moneyForToys += 5;
+        } else {
+            adultsCount++;
+            moneyForSweaters += 15;
         }
     }
 
-    let pricePerKg = 12.45;
-    let totalPrice = (totalFood / 1000) * pricePerKg;
-
-    console.log(`Group 1: ${firstGroup} cats.`);
-    console.log(`Group 2: ${secondGroup} cats.`);
-    console.log(`Group 3: ${thirdGroup} cats.`);
-    console.log(`Price for food per day: ${totalPrice.toFixed(2)} lv.`);
+    console.log(`Number of adults: ${adultsCount}`);
+    console.log(`Number of kids: ${kidsCount}`);
+    console.log(`Money for toys: ${moneyForToys}`);
+    console.log(`Money for sweaters: ${moneyForSweaters}`);
 }
 
-catFood(['6', '102', '236', '123', '399', '342', '222']);
+christmasGifts(['16', '20', '14', '25', 'Christmas']);
