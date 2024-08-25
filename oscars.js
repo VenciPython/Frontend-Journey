@@ -15,7 +15,7 @@ function oscars(input) {
         finalAcademyPoints += academyPointsJudge
 
         if (finalAcademyPoints > 1250.5) {
-            console.log(`Congratulations, ${actorName} got a nominee for leading role with ${finalAcademyPoints.toFixed(1)}`);
+            console.log(`Congratulations, ${actorName} got a nominee for leading role with ${finalAcademyPoints.toFixed(1)}!`);
             break
         }
     }
