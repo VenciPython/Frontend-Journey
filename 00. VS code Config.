@@ -23,3 +23,54 @@
 
 
 // file ---> Preferenses ---> Settings  ---> Json (json: Schemas)
+
+------------------------------------------------------------------
+
+//new 17.09.2024
+
+{
+  // Настройки за стартиране на програма (launch)
+  "launch": {
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "program": "${file}"
+      }
+    ],
+    "compounds": []
+  },
+
+  // Общи настройки
+  "files.autoSave": "afterDelay", // Автоматично запазване след кратко забавяне
+  "editor.minimap.enabled": false, // Изключване на минимапа
+  "editor.multiCursorModifier": "ctrlCmd", // Модификатор за множество курсори
+  "editor.formatOnSave": true, // Автоматично форматиране при запазване на файлове
+  "editor.mouseWheelZoom": true, // Увеличаване с колелцето на мишката
+  "json.schemas": [], // JSON схеми, ако е необходимо
+
+  // Настройки за HTML форматиране
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true // Автоматично форматиране при запазване
+  },
+  
+  // Настройки за JavaScript форматиране
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": true // Автоматично форматиране при запазване
+  },
+  
+  // Настройки за CSS форматиране
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "editor.formatOnSave": true // Автоматично форматиране при запазване
+  },
+
+  // Деактивиране на предупреждения при отваряне на свободни файлове
+  "livePreview.notifyOnOpenLooseFile": false,
+
+  // Настройка за Prettier (ако го инсталираш отново)
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
