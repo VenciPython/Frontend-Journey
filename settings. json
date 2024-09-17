@@ -109,3 +109,52 @@
   "editor.insertFinalNewline": true, // Добавяне на нов ред в края на файла
   "editor.wordWrap": "on" // Автоматично пренос на редове
 }
+
+
+--------------
+
+{
+  // Настройки за стартиране на програма (launch)
+  "launch": {
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch Program",
+        "program": "${file}"
+      }
+    ],
+    "compounds": []
+  },
+
+  // Общи настройки
+  "files.autoSave": "afterDelay", // Автоматично запазване след кратко забавяне
+  "editor.formatOnSave": true, // Автоматично форматиране при запазване на файлове
+  "editor.tabSize": 2, // Отстъп от 2 интервала за всички файлове
+  "editor.insertSpaces": true, // Използване на интервали вместо табулации
+  "editor.minimap.enabled": false, // Изключване на минимапа
+  "editor.multiCursorModifier": "ctrlCmd", // Модификатор за множество курсори
+  "editor.mouseWheelZoom": true, // Увеличаване с колелцето на мишката
+  "editor.formatOnPaste": true, // Форматиране при поставяне на код
+  "editor.trimAutoWhitespace": true, // Премахване на излишни празни интервали
+  "editor.insertFinalNewline": true, // Добавяне на нов ред в края на файла
+  "editor.wordWrap": "on", // Автоматично пренос на редове
+
+  // Настройки за HTML форматиране
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features", // Вграден HTML форматер
+    "editor.formatOnSave": true // Автоматично форматиране при запазване
+  },
+
+  // Настройки за JavaScript форматиране
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features", // Вграден JS форматер
+    "editor.formatOnSave": true // Автоматично форматиране при запазване
+  },
+
+  // Настройки за CSS форматиране
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features", // Вграден CSS форматер
+    "editor.formatOnSave": true // Автоматично форматиране при запазване
+  }
+}
