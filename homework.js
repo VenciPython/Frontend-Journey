@@ -1,3 +1,25 @@
+function print(text, text2) {
+    console.log(text + " " + text2);
+}
+
+function sayHello() {
+    console.log("Hello");
+}
+
+print("Hello", "world");
+print();
+sayHello();
+
+function add(a, b) {
+    //return a + b;
+    let c = a + b;
+    return c;
+}
+let result = add(3, 5);
+result += 1;
+console.log(add(result, 4));
+
+
 // switch (expression){
 //     case value1: 
 //         // кода който ще се изпълни ако е expression == value1
@@ -46,28 +68,6 @@
 // const dayname = weekdays(7);
 // dayname= 5;
 // console.log(dayname);
-
-
-function print(text, text2) {
-    console.log(text + " " + text2);
-}
-
-function sayHello() {
-    console.log("Hello");
-}
-
-print("Hello", "world");
-print();
-sayHello();
-
-function add(a, b) {
-    //return a + b;
-    let c = a + b;
-    return c;
-}
-let result = add(3, 5);
-result += 1;
-console.log(add(result, 4));
 
 // Задача 1: Основна функция
 // Описание: Напишете функция square, която приема едно число като аргумент и връща квадратния му корен.
