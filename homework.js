@@ -19,7 +19,6 @@ let result = add(3, 5);
 result += 1;
 console.log(add(result, 4));
 
-
 // switch (expression){
 //     case value1: 
 //         // кода който ще се изпълни ако е expression == value1
