@@ -1,4 +1,4 @@
-function trip(input) {
+function tripPrice(input) {
 
    let numberOfPeople = Number(input[0]);
    let numberOfNights = Number(input[1]);
@@ -18,5 +18,4 @@ function trip(input) {
    console.log(allPrice.toFixed(2));
 
 }
-
-trip(['131', '9', '33', '46'])
+//tripPrice(['131', '9', '33', '46'])
