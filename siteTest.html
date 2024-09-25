@@ -14,7 +14,7 @@
       text-align: center;
       font-family: Arial, sans-serif;
     }
-    
+
     .center-content {
       padding: 20px;
       border-radius: 10px;
@@ -40,6 +40,16 @@
       text-decoration: underline;
     }
 
+    .image-container {
+      margin-top: 20px;
+    }
+
+    .image-container img {
+      max-width: 100%; /* Снимката да не надвишава ширината на контейнера */
+      height: auto; /* Поддържа пропорциите на снимката */
+      border-radius: 10px; /* Закръглени ъгли на снимката */
+    }
+
     footer {
       position: absolute;
       bottom: 10px;
@@ -62,7 +72,13 @@
       <h3>Enjoy :)</h3>
       <h2><a href="https://github.com/VenciPython/Frontend-Journey" style="color: #003a80;">Visit my GitHub repository</a></h2>
     </section>
+
+    <!-- Добавяне на снимка -->
+    <div class="image-container">
+      <img src="your-image.jpg" alt="Description of the image">
+    </div>
   </div>
+  
   <footer>
     <p>&copy; 2024 VenciDev | All rights reserved</p>
   </footer>
