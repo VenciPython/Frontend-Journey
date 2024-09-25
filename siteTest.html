@@ -4,59 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VenciDev</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
-    .center-content {
-      padding: 20px;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 0, 0.05);
-    }
-
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: blue;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    .image-container {
-      margin-top: 20px;
-    }
-
-    .image-container img {
-      max-width: 100%; /* Снимката да не надвишава ширината на контейнера */
-      height: auto; /* Поддържа пропорциите на снимката */
-      border-radius: 10px; /* Закръглени ъгли на снимката */
-    }
-
-    footer {
-      position: absolute;
-      bottom: 10px;
-      text-align: center;
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="center-content">
@@ -72,11 +20,6 @@
       <h3>Enjoy :)</h3>
       <h2><a href="https://github.com/VenciPython/Frontend-Journey" style="color: #003a80;">Visit my GitHub repository</a></h2>
     </section>
-
-    <!-- Добавяне на снимка -->
-    <div class="image-container">
-      <img src="your-image.jpg" alt="Description of the image">
-    </div>
   </div>
   
   <footer>
@@ -84,3 +27,47 @@
   </footer>
 </body>
 </html>
+
+
+-----------
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.center-content {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: blue;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
