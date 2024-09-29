@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <!-- Главата на HTML документа -->
+  <head id="head">
+    <!-- Заглавие на страницата, което се показва в раздела на браузъра -->
+    <title>Example HTML Website</title>
+  </head>
+  
+  <body>
+    <!-- Заглавната част на страницата -->
+    <header>
+      <!-- Основно заглавие на страницата -->
+      <h1>My Website</h1>
+    </header>
+    
+    <!-- Навигационна лента с линкове -->
+    <nav>
+      <ul>
+        <!-- Линк към началната страница -->
+        <li><a href="#">Home</a></li>
+        <!-- Линк към страницата "About" -->
+        <li><a href="#">About</a></li>
+        <!-- Линк към страницата "Contact" -->
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Основната част на страницата -->
+    <main>
+      <!-- Подзаглавие на основната част -->
+      <h2>Welcome to My Website</h2>
+      <!-- Описание или кратък текст -->
+      <p>This is a simple website.</p>
+      
+      <!-- Бутон, който задейства функцията addCSS при натискане -->
+      <button onclick="addCSS()" id="button">Toggle CSS</button>
+    </main>
+    
+    <!-- Футър част на страницата -->
+    <footer>
+      <p>Copyright © App Brewery</p>
+    </footer>
+    
+    <!-- JavaScript код -->
+    <script>
+      // Променлива, която ще брои колко пъти е натиснат бутонът
+      let counter = 0;
+      
+      // Функция, която се изпълнява при натискане на бутона
+      function addCSS() {
+        // Увеличаване на брояча
+        counter++;
+        
+        // Проверка дали броячът е кратен на 2
+        if (counter % 2 !== 0) {
+          // Добавяне на линк към CSS стилов файл в head секцията
+          document.getElementById("head").innerHTML = '<title>Example HTML Website</title> \n<link rel="stylesheet" href="./styles.css" />';
+        } else {
+          // Премахване на линка към CSS стилов файл (връщане към оригиналното състояние)
+          document.getElementById("head").innerHTML = '<title>Example HTML Website</title>';
+        }
+      }
+    </script>
+  </body>
+</html>
