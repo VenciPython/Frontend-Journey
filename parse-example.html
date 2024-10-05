@@ -1,0 +1,30 @@
+<!--'Parse' example from JS Book (update with modern syntaxis, using chat GPT)-->
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Parse example</title>
+</head>
+
+<body>
+    <h2>Parsing string to number example</h2>
+
+    <p id="output"></p> <!--Element to display the result-->
+
+    <script>
+        let degresString = "56.02 degress";
+        let myInt = parseInt(degresString, 10);
+        let myFloat = parseFloat(degresString);
+
+        document.getElementById("output").innerHTML = `
+            <p>The original string is: ${degresString}</p>
+            <p>Convert to an integer is: ${myInt}</p>
+            <p>Convert to floating number: ${myFloat}</p>
+            ` // Add a backtick(`) at the beginning of innerHTML = and in the end.
+    </script>
+</body>
+
+</html>
