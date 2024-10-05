@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Двуизмерен масив</title>
+</head>
+<body>
+    <script>
+        // Деклариране на двумерен масив
+        const personnel = [
+            ["Name0", "Age0", "Address0"],
+            ["Name1", "Age1", "Address1"],
+            ["Name2", "Age2", "Address2"]
+        ];
+
+        // Извеждане на данни от масива в конзолата
+        console.log(`Name: ${personnel[1][0]}`);
+        console.log(`Age: ${personnel[1][1]}`);
+        console.log(`Address: ${personnel[1][2]}`);
+
+        // Показване на информацията на страницата
+        const output = document.createElement('div');
+        output.innerHTML = `
+            <p>Name: ${personnel[1][0]}</p>
+            <p>Age: ${personnel[1][1]}</p>
+            <p>Address: ${personnel[1][2]}</p>
+        `;
+        document.body.appendChild(output);
+    </script>
+</body>
+</html>
