@@ -1,0 +1,25 @@
+<!--Array & .push-->
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern example</title>
+</head>
+
+<body>
+    <div id="test"></div>
+    <script>
+        let myArray = ['car', 'gold', '95'];
+        myArray.push('Venci')
+        document.getElementById('test').innerHTML = `
+            <p>${myArray[0]}</p>
+            <p>${myArray[1]}</p>
+            <p>${myArray[2]}</p>
+            <p>${myArray[3]}</p>
+           `;
+    </script>
+</body>
+
+</html>
