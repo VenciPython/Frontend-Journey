@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2, Question 2</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+        function sumOfNumbers(input) {
+            let numAsStr = input;
+            let sum = 0;
+
+            for (let i = 0; i < numAsStr.length; i++) {
+                let numAsNum = Number(numAsStr[i]);
+                sum += numAsNum;
+            }
+            document.getElementById("result").innerHTML = `The sum of the digits is:${sum}`;
+        }
+        sumOfNumbers(`1234`);
+    </script>
+</body>
+
+</html>
