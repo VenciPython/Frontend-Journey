@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Nesting list</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested list</title>
 </head>
 
 <body>
-  <ul>
-    <li>A</li>
-    <li>B
-      <li>BA</li>
-      <li>BB
-        <li>BBA</li>
-        <li>BBB
-          <li>BBBC</li>
+    <h1>Nested list</h1>
+    <ul>
+        <li>A</li>
+        <li>B
+            <ol>
+                <li>B1</li>
+                <li>B2
+                    <ul>
+                        <li>B2A
+                            <ul>
+                                <li>B2AA</li>
+                                <li>B2AB</li>
+                            </ul>
+                        </li>
+                        <li>B2B</li>
+                        <li>B2C</li>
+                    </ul>
+                </li>
+                <li>B3
+                    <ol>
+                        <li>B31</li>
+                        <li>B32</li>
+                    </ol>
+                </li>
+
+            </ol>
         </li>
-      </li>
-    </li>
-  </ul>
+        <li>C</li>
+    </ul>
+
 </body>
 
 </html>
