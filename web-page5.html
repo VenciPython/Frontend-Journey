@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKDF7CKQ73"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EKDF7CKQ73');
+    </script>
+    <meta name="google-site-verification" content="JJVpD08RmEHgxIYCm72WF9DrWSjlzD1-B_oFemVwRSc" />
+    <meta name="description" content="Биткойн за начинаещи.">
+    <meta name="keywords"
+        content="Биткойн, криптовалута, StudyBitcoin, study bitcoin, Lightning Network, Биткойн за начинаещи, блокчейн, крипто, Какво е Биткойн, Как работи Биткойн, Измама ли е Биткойн, Пирамида">
+    <meta name="robots" content="index, follow">
+    <title>Study Bitcoin</title>
+    <link rel="icon" type="image/png" href="btc-logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            /* Add gradient for day*/
+            background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+            /*for dark mode background: 1e2a38 */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: transparent;
+            border: 4px solid black;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .content {
+            background-color: whitesmoke;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .title-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title-container h1 {
+            font-size: 2.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 7px;
+            margin-top: 7px;
+        }
+
+        .title-image {
+            height: 3.3rem;
+            margin-left: 10px;
+        }
+
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 20px 0;
+        }
+
+        .folder-btn {
+            display: block;
+            text-decoration: none;
+            background-color: #f08c24;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .folder-btn:hover {
+            background-color: #e67e22;
+        }
+
+        .file-btn {
+            display: block;
+            text-decoration: none;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .file-btn:hover {
+            background-color: #e0e0e0;
+            color: #000;
+        }
+
+        .file-btn.animate {
+            animation: pop-up 0.5s forwards;
+        }
+
+        @keyframes pop-up {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <div class="content">
+        <div class="title-container">
+            <h1>Study Bitcoin
+                <img src="man.jpeg" alt="Bitcoin" class="title-image">
+            </h1>
+        </div>
+        <p>Чудиш се какво е Биткойн? Може би си чувал за него, но все още не разбираш напълно как работи и защо има
+            стойност? Не се притеснявай – не си сам! Биткойн е нещо повече от дигитална валута – той е революция в света
+            на парите. Тук ще намериш всичко необходимо - от лесни и достъпни ресурси, до технически обяснения на
+            български, които ще ти помогнат да разбереш основите. Направи първата крачка в света на Биткойн!</p>
+
+        <h2>Ресурси за начинаещи 📄</h2>
+        <ul>
+            <li><a class="file-btn" href="bitcoin.pdf" target="_blank">Биткойн и история на парите [pdf]</a></li>
+            <li><a class="file-btn" href="FAQ_for_bitcoin.pdf" target="_blank">Често задавани въпроси за Биткойн
+                    [pdf]</a></li>
+        </ul>
+
+        <h2>Папки 📁</h2>
+        <ul>
+            <li><a class="folder-btn" href="btc/btc.html">Биткойн за възрастни</a></li>
+            <li><a class="folder-btn" href="kids/kids.html">Биткойн за деца</a></li>
+        </ul>
+    </div>
+    <script>
+        function toggleTheme() {
+            window.location.href = "index_dark.html";
+        }
+
+        // Добавяне на анимация при hover
+        document.querySelectorAll('.file-btn').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.classList.add('animate');
+            });
+            item.addEventListener('mouseout', () => {
+                item.classList.remove('animate');
+            });
+        });
+    </script>
+    
+    <!--<footer>
+        <p>&copy; 2024| Всички права запазени.</p>
+    </footer>-->
+
+</body>
+
+</html>
