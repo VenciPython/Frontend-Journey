@@ -1,0 +1,268 @@
+<!-- Second page of "web-page5.html" -->
+
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKDF7CKQ73"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EKDF7CKQ73');
+    </script>
+    <title>Study Bitcoin</title>
+    <link rel="icon" type="image/png" href="btc-logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            
+            /* Add gradient */
+            background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+           
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        /*Change the style button*/
+        .theme-toggle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: linear-gradient(135deg, #f08c24, #ff7e5f); /*color change*/
+            color: white;
+            border: none;
+            border-radius: 12px; /*add shadow*/
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*add shadow*/
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* element transitions(backgroud & shadow*/
+        }
+        /*Change the style button*/
+        .theme-toggle:hover {
+            background: linear-gradient(135deg, #ff7e5f, #f08c24);
+            transform: scale(1.1); /*button size increase */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /*shadow increase*/
+        }
+
+        .theme-toggle:active {
+            transform: scale(0.95); /*resize button*/
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*return shadow*/
+        }
+        /*End of button style changes*/
+        
+        .content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /*Add class for jump letter "S"*/
+        .jump {
+            display: inline-block;
+            /* here I can add infinity jump if you want*/
+            animation: jump 1s ease-in-out;
+        }
+
+        /*Add jump letter "S" animation*/
+        @keyframes jump {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0); /*First position of anim.*/
+            }
+
+            40% {
+                transform: translateY(-30px); /*element move up side with 30px*/
+            }
+
+            60% {
+                transform: translateY(-15px); /*move again with 15px*/
+            }
+        }/*end of line for jump "S"*/
+
+        .title-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-title{ /* set Title like first index.html page */
+            color: black;
+            /*Add shadow and set a color*/
+            text-shadow: 0 0 3px #FF0000;
+            font-size: 2.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 7px;
+            margin-top: 7px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        ul {
+            list-style-type: none;
+             /*Here we attempted to remove the listdots - at line 177, I try again to remove */
+
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            margin: 20px 0;
+        }
+
+        /*some changes here - set this class same style*/
+        .file-btn,
+        .folder-btn { 
+            display: block;
+            text-decoration: none;
+            background-color: #f4f4f4; /*color change*/
+            color: #333;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center; /* add*/
+            margin: 10px 0; /*add margin */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .file-btn:hover,/*add*/
+        .file-btn:focus,/*add*/
+        .file-btn:active, /*add*/
+        .folder-btn:hover, 
+        .folder-btn:focus,/*add*/
+        .folder-btn:active {
+            background: linear-gradient(135deg, #ff7e5f, #f08c24);
+            color: white;
+        }
+
+        /*add specific*/
+        .folder-btn {
+            background-color: #f08c24;
+            border: none;
+            font-size: 1.1rem; /*zoom button*/
+        }
+        
+       li {
+            list-style-type: none; /*Again tring to remove the list dots*/
+        }
+
+        .back-button {
+            margin-top: 20px;
+            display: block;
+            text-decoration: none;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+
+        .donate {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .donate img {
+            margin-top: 4px;
+            max-width: 140px;
+            width: 100%;
+        }
+
+        .donate p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .donate a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+            margin-top: 4px;
+        }
+
+        .donate a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <div class="content">
+        <h1 class="main-title"><span class="jump">S</span>tudy Bitcoin</h1>  <!--set class like first index.html page-->
+        <h2>Биткойн за възрастни</h2>
+        <h3>Ресурси 📄</h3>
+        <ul>
+            <li><a class="file-btn" href="how_to_buy.pdf" target="_blank">Как се купува лесно и с ниски такси [pdf]</a>
+            </li>
+            <li><a class="file-btn" href="how_to_store_bitcoin.pdf" target="_blank">Как се съхранява Биткойн и видовете
+                    портфейли [pdf]</a></li>
+            <li><a class="file-btn" href="lightning_network.pdf" target="_blank">Какво е Lightning Network
+                    (Светкавичната мрежа) [pdf]</a></li>
+            <li><a class="file-btn" href="book_list.pdf" target="_blank">Книги за Биткойн [pdf]</a></li>
+        </ul>
+        <h3>Папки 📁</h3>
+        <ul>
+            <li><a class="folder-btn" href="advanced/advanced.html">Биткойн за напреднали</a></li>
+            <li><a class="folder-btn" href="films/films.html">Филми и YouTube канали за Биткойн</a></li>
+            <li><a class="folder-btn" href="contact/contact.html">Контакти</a></li>
+        </ul>
+        <a class="back-button" href="../">Назад</a>
+
+        <div class="donate">
+            <br></br>
+            <p>Ако научи нещо ново,<br>може да ме черпиш бира през<br>Lightning Network!</p>
+            <img src="lnurl.jpeg" alt="Lightning Network QR Code">
+            <p><a
+                    href="lightning:lnurl1dp68gurn8ghj7ampd3kx2ar0veekzar0wd5xjtnrdakj7tnhv4kxctttdehhwm30d3h82unvwqhhxmmpwf5kuemrv9e8qdfs6t9guu">Отвори
+                    LN портфейл</a></p>
+            <p>Сайтът е с образователна цел<br>и не съдържа финансови съвети.<br>Учете, изследвайте<br>и вземайте
+                решенията си осъзнато!</p>
+        </div>
+    </div>
+    <script>
+        function toggleTheme() {
+            window.location.href = "btc_dark.html";
+        }
+    </script>
+</body>
+
+</html>
