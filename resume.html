@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ventsislav Zaharievi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 100px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .header h2 {
+            margin: 5px 0 0;
+            font-size: 18px;
+            color: #666;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .section p,
+        .section ul {
+            margin: 0;
+            padding: 0;
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .section ul li {
+            margin-bottom: 5px;
+        }
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: center;
+            }
+            .header img {
+                margin: 0 auto 10px;
+                width: 80px;
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            .header h2 {
+                font-size: 16px;
+            }
+            .section h3 {
+                font-size: 18px;
+            }
+            .section p,
+            .section ul li {
+                font-size: 14px;
+            }
+            .button {
+                font-size: 14px;
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .header img {
+                width: 60px;
+            }
+            .header h1 {
+                font-size: 18px;
+            }
+            .header h2 {
+                font-size: 14px;
+            }
+            .section h3 {
+                font-size: 16px;
+            }
+            .section p,
+            .section ul li {
+                font-size: 12px;
+            }
+            .button {
+                font-size: 12px;
+                padding: 6px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/100" alt="Ventsislav Zaharievi">
+            <div>
+                <h1>Ventsislav Zaharievi</h1>
+                <h2>Aspiring Software Developer</h2>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Contact</h3>
+            <p>Phone: 0886759595</p>
+            <p>Email: contact@vencidev.site</p>
+            <p>Website: <a href="http://vencidev.site" target="_blank">vencidev.site</a></p>
+        </div>
+        
+        <div class="section">
+            <h3>Education</h3>
+            <p>New Bulgarian University - Bachelor of Political Science</p>
+        </div>
+        
+        <div class="section">
+            <h3>Certifications</h3>
+            <ul>
+                <li>HTML Essential Training</li>
+                <li>JavaScript: Classes & Functions</li>
+                <li>Python - LinkedIn Learning & SoftUni</li>
+                <li>SQL: Basic - LinkedIn Learning</li>
+                <li>English B2 - New Bulgarian University</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3>Professional Summary</h3>
+            <p>Currently working as a legal assistant with a growing interest in programming, skilled in both front-end and back-end development. Proficient in JavaScript, HTML, and CSS, and continuously advancing my skills through hands-on projects and self-study.</p>
+        </div>
+        
+        <div class="section">
+            <h3>Projects</h3>
+            <p>Developed and deployed personal website versions (v1, v2, and ongoing updates) to enhance portfolio and showcase technical skills. Each version demonstrates my progress in functionality, design, and performance.</p>
+        </div>
+        
+        <div class="section">
+            <h3>Skills</h3>
+            <ul>
+                <li><strong>Programming:</strong> JavaScript (Advanced), Python (Fundamentals)</li>
+                <li><strong>Web Development:</strong> HTML5, CSS3, Bootstrap, Static Website Creation</li>
+                <li><strong>Project Management:</strong> Git and GitHub</li>
+            </ul>
+        </div>
+        
+        <a href="cv.pdf" download class="button">Download CV</a>
+    </div>
+</body>
+</html>
